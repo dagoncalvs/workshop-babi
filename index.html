@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teologia da Adoração · Workshop com Babi Canuto · 24/11</title>
+<meta name="description" content="Workshop online e ao vivo com Babi Canuto. Terça, 24/11, das 20h às 22h, pelo Google Meet. Louvor, adoração, as 7 expressões de louvor e a arte como meio.">
+<meta property="og:title" content="Teologia da Adoração · Workshop com Babi Canuto">
+<meta property="og:description" content="Terça, 24/11, das 20h às 22h, ao vivo pelo Google Meet.">
+<meta property="og:image" content="img/capa.jpg">
+<meta name="theme-color" content="#08050d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#08050d;
+    --surface:#130b20;
+    --ink:#f7f2ff;
+    --muted:#c9bce4;
+    --violet:#6d28d9; /* taste-skill-ignore: roxo da marca (capa da Hotmart) */
+    --violet-2:#7c3aed; /* taste-skill-ignore: roxo da marca */
+    --lilac:#d6c6ff;
+    --on-lilac:#1a0b2e;
+    --on-lilac-2:#3d2a5c;
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --sans:Manrope,"Helvetica Neue",Arial,sans-serif;
+    --m:clamp(20px,5vw,72px);
+    --ease-out:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{font-feature-settings:"lnum" 1}
+  ::selection{background:var(--lilac);color:var(--on-lilac)}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--lilac);outline-offset:3px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .wrap{padding:0 var(--m);max-width:1440px;margin:0 auto}
+  h2{font:600 clamp(34px,4.6vw,64px)/1.02 var(--serif);letter-spacing:-.015em;text-wrap:balance}
+  section{padding:clamp(72px,8.5vw,120px) 0}
+
+  /* botão */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:0 30px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--violet);color:#fff;font:800 15px/1 var(--sans);letter-spacing:.02em;text-decoration:none;
+    transition:transform 160ms var(--ease-out),background-color 200ms ease}
+  .btn svg{width:18px;height:18px;transition:transform 200ms var(--ease-out)}
+  @media (hover:hover) and (pointer:fine){
+    .btn:hover{background:var(--violet-2)}
+    .btn:hover svg{transform:translateX(4px)}
+  }
+  .btn:active{transform:scale(.97)}
+  .btn.light{background:var(--on-lilac);color:var(--lilac)}
+
+  /* barra do topo */
+  .topbar{background:var(--lilac);color:var(--on-lilac);text-align:center;font:700 14px/1.3 var(--sans);padding:10px 12px}
+  @media (max-width:400px){.topbar{font-size:13px}}
+
+  /* navegação */
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:22px var(--m);max-width:1440px;margin:0 auto;position:relative;z-index:2}
+  .nav b{font:600 22px/1 var(--serif);letter-spacing:.01em}
+  .nav .btn{min-height:44px;padding:0 20px;font-size:14px}
+
+  /* hero */
+  .hero{position:relative;padding:0;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:end;max-width:1440px;margin:0 auto;padding:0 var(--m);min-height:calc(100svh - 120px)}
+  .hero-text{padding:clamp(24px,5vw,64px) 0 clamp(48px,7vw,96px);position:relative;z-index:1;display:flex;flex-direction:column}
+  .hero-text>*{flex:none}
+  .load{animation:load 900ms var(--ease-out) both;animation-delay:calc(var(--i,0) * 90ms)}
+  @keyframes load{from{opacity:0;transform:translateY(18px)}}
+  .lettering{width:min(100%,760px);margin-left:-1.5%}
+  .hero-lead{font-size:clamp(18px,1.5vw,21px);line-height:1.5;max-width:34ch;margin-top:clamp(20px,3vw,36px)}
+  .hero-fact{font:600 clamp(24px,2.3vw,32px)/1.2 var(--serif);margin-top:20px}
+  .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:32px}
+  .hero-cta small{font-size:15px;color:var(--muted)}
+  .hero-photo{align-self:stretch;position:relative;margin-right:calc(var(--m) * -1)}
+  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 22%);mask-image:linear-gradient(to right,transparent 0,#000 22%)} /* taste-skill-ignore: scrim da foto */
+
+  /* marquee */
+  .marquee{background:var(--violet);color:#fff;overflow:hidden;padding:clamp(16px,2vw,28px) 0;border:0}
+  .marquee-track{display:flex;width:max-content;animation:marquee 38s linear infinite}
+  .marquee span{font:italic 500 clamp(40px,6.5vw,96px)/1 var(--serif);white-space:nowrap;padding-right:.5em}
+  .marquee i{display:inline-block;width:.42em;height:.42em;margin-right:.5em;opacity:.6;vertical-align:.12em}
+  .marquee i svg{width:100%;height:100%}
+  @keyframes marquee{to{transform:translateX(-50%)}}
+  @media (hover:hover){.marquee:hover .marquee-track{animation-play-state:paused}}
+
+  /* abertura (lilás) */
+  .intro{background:var(--lilac);color:var(--on-lilac)}
+  .intro-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,120px);align-items:start}
+  .questions{list-style:none;margin-top:clamp(32px,4vw,56px);display:grid;gap:clamp(18px,2vw,28px)}
+  .questions li{font:500 clamp(26px,2.6vw,38px)/1.12 var(--serif);text-wrap:balance}
+  .intro-body p{font-size:clamp(17px,1.35vw,19px);line-height:1.6}
+  .intro-body p+p{margin-top:18px}
+  .intro-body strong{font-weight:800}
+  .callout{margin-top:clamp(28px,3vw,40px);background:var(--on-lilac);color:var(--ink);padding:clamp(24px,3vw,36px);border-radius:20px}
+  .callout p{font:600 clamp(24px,2.2vw,32px)/1.2 var(--serif) !important}
+  .intro .btn{margin-top:32px}
+
+  /* o que vai aprender */
+  .learn-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:clamp(48px,6vw,96px)}
+  .learn-head p{color:var(--muted);max-width:44ch}
+  .topic{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,96px);padding:clamp(28px,3.4vw,48px) 0}
+  .topic h3{font:600 clamp(32px,4vw,58px)/1 var(--serif);letter-spacing:-.015em}
+  .topic .hook{font:italic 500 clamp(19px,1.6vw,23px)/1.3 var(--serif);color:var(--lilac);margin-top:12px;padding:0}
+  .topic p{font-size:17px;line-height:1.6;max-width:44ch;padding-top:6px}
+
+  /* para quem */
+  .who{background:var(--surface)}
+  .who-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,120px);align-items:start}
+  .who-grid figure,.about-grid figure{order:-1}
+  .who-grid figure img{aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;width:100%;border-radius:20px}
+  .who ul{list-style:none;margin-top:clamp(28px,3vw,44px);display:grid;gap:4px}
+  .who li{display:grid;grid-template-columns:28px 1fr;gap:14px;font:500 clamp(22px,2vw,28px)/1.3 var(--serif);padding:18px 0}
+  .who li svg{width:22px;height:22px;margin-top:6px;color:var(--lilac)}
+  .who .btn{margin-top:28px}
+
+  /* data + contagem */
+  .when-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,120px);align-items:end}
+  .when h2{font-size:clamp(44px,7vw,108px);line-height:.95}
+  .when-rows{display:grid;gap:22px;font-size:18px}
+  .when-rows div{display:flex;justify-content:space-between;gap:24px}
+  .when-rows dt{color:var(--muted)}
+  .when-rows dd{font-weight:700;text-align:right}
+  .count{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:clamp(40px,5vw,72px)}
+  .count div{background:var(--surface);border-radius:16px;padding:18px 8px;text-align:center}
+  .count b{display:block;font:600 clamp(40px,5vw,72px)/1 var(--serif);font-feature-settings:"lnum" 1,"tnum" 1}
+  .count span{font-size:14px;color:var(--muted)}
+  .count-note{margin-top:14px;color:var(--muted);font-size:15px}
+
+  /* preço */
+  .price{background:var(--violet);color:#fff}
+  .price-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,120px);align-items:start}
+  .price h2{font-size:clamp(40px,5.4vw,80px)}
+  .price-sub{margin-top:24px;font-size:18px;max-width:40ch}
+  .includes{background:#fff;color:var(--on-lilac);border-radius:24px;padding:clamp(24px,3vw,40px)}
+  .includes h3{font:600 28px/1.1 var(--serif)}
+  .includes ul{list-style:none;margin:20px 0 28px;display:grid;gap:12px}
+  .includes li{display:grid;grid-template-columns:22px 1fr;gap:12px;font-size:16px;line-height:1.45}
+  .includes li svg{width:20px;height:20px;margin-top:2px;color:var(--violet)}
+  .includes .btn{width:100%}
+  .includes .pay{margin-top:14px;font-size:14px;color:var(--on-lilac-2);text-align:center}
+
+  /* depoimentos */
+  .quote{margin:clamp(40px,5vw,72px) 0 clamp(56px,7vw,112px)}
+  .quote blockquote{font:italic 500 clamp(24px,3vw,36px)/1.2 var(--serif);max-width:30ch;text-wrap:balance}
+  .quote figcaption{margin-top:20px;color:var(--muted);font-size:16px}
+  .prints{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px);align-items:start}
+  .prints figure:nth-child(2){margin-top:clamp(0px,6vw,96px)}
+  .prints img{border-radius:18px;width:100%}
+  .prints figcaption{font-size:15px;color:var(--muted);margin-top:10px}
+
+  /* sobre */
+  .about{background:var(--surface)}
+  .about-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,120px);align-items:center}
+  .about-grid img{aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:20px;width:100%}
+  .about p{font-size:clamp(17px,1.4vw,20px);line-height:1.6;max-width:52ch}
+  .about p+p{margin-top:16px}
+  .about h2{margin-bottom:28px}
+  .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:36px}
+  .facts div{background:var(--bg);border-radius:16px;padding:20px 16px}
+  .facts b{display:block;font:600 clamp(32px,3.2vw,44px)/1 var(--serif)}
+  .facts span{display:block;margin-top:8px;font-size:15px;color:var(--muted);line-height:1.35}
+
+  /* garantia */
+  .guarantee-grid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center;max-width:1000px}
+  .seal{width:clamp(120px,14vw,180px);aspect-ratio:1;border-radius:50%;background:var(--lilac);color:var(--on-lilac);display:grid;place-items:center;text-align:center}
+  .seal b{font:600 clamp(48px,6vw,72px)/.9 var(--serif);display:block}
+  .seal span{font:700 14px/1.1 var(--sans)}
+  .guarantee p{color:var(--muted);margin-top:16px;max-width:52ch}
+
+  /* faq */
+  .faq{padding-top:0}
+  .qa{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(20px,5vw,96px);padding:clamp(28px,3.6vw,52px) 0}
+  .qa h3{font:600 clamp(26px,2.6vw,38px)/1.12 var(--serif)}
+  .qa p{color:var(--muted);max-width:42ch}
+  .faq h2{margin-bottom:clamp(16px,2vw,32px)}
+
+  /* fechamento */
+  .close{background:var(--lilac);color:var(--on-lilac);min-height:80svh;display:flex;align-items:stretch}
+  .close .wrap{display:flex;flex-direction:column;justify-content:space-between;gap:56px;width:100%}
+  .close h2{font-size:clamp(46px,7.4vw,116px);line-height:.95;max-width:17ch}
+  .close-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px}
+  .close-foot p{font-size:19px;max-width:38ch}
+
+  footer{padding:clamp(56px,7vw,96px) 0 32px}
+  footer img{width:100%;max-width:1100px;opacity:.95}
+  .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:40px;color:var(--muted);font-size:14px}
+
+
+  /* entradas */
+  .js [data-rise]:not(.in){opacity:.3;transform:translateY(28px)}
+  .js [data-rise]{transition:opacity 700ms var(--ease-out),transform 900ms var(--ease-out);transition-delay:calc(var(--i,0) * 80ms)}
+  .hero-photo img{animation:drift 18s ease-in-out infinite alternate}
+  @keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.08) translateY(-1%)}}
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:minmax(0,1fr);min-height:0}
+    .hero-photo{order:-1;height:50svh;margin:0 calc(var(--m) * -1)}
+    .hero-text h1{order:1}.hero-fact{order:2;margin-top:12px}.hero-cta{order:3;margin-top:20px}.hero-lead{order:4}
+    .hero-photo img{object-position:50% 8%;-webkit-mask-image:linear-gradient(to top,transparent 0,#000 30%);mask-image:linear-gradient(to top,transparent 0,#000 30%)} /* taste-skill-ignore: scrim da foto */
+    .hero-text{margin-top:-16svh;padding-top:0}
+    .lettering{margin-left:0}
+    .intro-grid,.learn-head,.topic,.who-grid,.when-grid,.price-grid,.about-grid,.qa{grid-template-columns:minmax(0,1fr)}
+    .topic{gap:12px}
+    .prints{grid-template-columns:minmax(0,1fr)}
+    .prints figure:nth-child(2){margin-top:0}
+    .prints figure{max-width:440px}
+    .who-grid figure{max-width:420px}
+    .who-grid figure,.about-grid figure{order:0}
+    .guarantee-grid{grid-template-columns:minmax(0,1fr)}
+    .nav .btn{display:none}
+    .count span{font-size:13px}
+  }
+  @media (max-width:520px){
+    .close-foot .btn,.intro .btn,.who .btn,.hero-cta .btn{width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .marquee-track,.hero-photo img{animation:none}
+    .js [data-rise]:not(.in){transform:none}
+    .load{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Ao vivo no Google Meet · Terça, 24/11 · 20h às 22h</div>
+
+<header class="hero">
+  <nav class="nav" aria-label="Principal">
+    <b>Babi Canuto</b>
+    <a class="btn buy" href="#" data-checkout>Garantir vaga</a>
+  </nav>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <h1 class="load" style="--i:0">
+        <img class="lettering" src="img/lettering.png" alt="Teologia da Adoração: workshop online com Babi Canuto" width="780" height="380">
+      </h1>
+      <p class="hero-lead load" style="--i:2">Uma noite para olhar o que a Palavra ensina sobre adoração, louvor e música, e como isso transforma a forma de viver, servir e ministrar.</p>
+      <p class="hero-fact load" style="--i:1">Terça, 24/11 · 20h às 22h · ao vivo</p>
+      <div class="hero-cta load" style="--i:3">
+        <a class="btn buy" href="#" data-checkout>Quero garantir minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <small>Com Babi Canuto, líder de adoração há 21 anos</small>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="img/babi-palco.jpg" alt="Babi Canuto sorrindo, de jaqueta preta, diante de uma cortina roxa" width="660" height="838" fetchpriority="high"></div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Louvor <i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z" fill="currentColor"/></svg></i> Adoração <i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z" fill="currentColor"/></svg></i> As 7 expressões de louvor <i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z" fill="currentColor"/></svg></i> A arte é um meio, não o fim <i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z" fill="currentColor"/></svg></i></span>
+    <span>Louvor <i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z" fill="currentColor"/></svg></i> Adoração <i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z" fill="currentColor"/></svg></i> As 7 expressões de louvor <i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z" fill="currentColor"/></svg></i> A arte é um meio, não o fim <i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z" fill="currentColor"/></svg></i></span>
+  </div>
+</div>
+
+<section class="intro" id="sobre-a-noite">
+  <div class="wrap intro-grid">
+    <div>
+      <h2 data-rise>Três perguntas que mudam o seu ministério</h2>
+      <ol class="questions">
+        <li data-rise style="--i:1">Qual a diferença entre louvor e adoração?</li>
+        <li data-rise style="--i:2">O que são as 7 expressões de louvor?</li>
+        <li data-rise style="--i:3">Por que a arte é um meio e não o fim?</li>
+      </ol>
+    </div>
+    <div class="intro-body">
+      <p data-rise style="--i:1">No dia <strong>24/11</strong> vamos olhar para o que a Palavra ensina sobre adoração, louvor e música, e como isso transforma a nossa forma de viver, servir, conduzir e ministrar.</p>
+      <p data-rise style="--i:2">Uma aula para equipes de louvor e líderes de adoração que desejam se equipar e subir de nível, fazendo parte da geração que honra a Deus com excelência, sem separar a técnica da unção.</p>
+      <div class="callout" data-rise style="--i:3"><p>O Senhor não merece nada pela metade. Ele é digno de tudo, por inteiro.</p></div>
+      <a class="btn light buy" href="#" data-checkout data-rise style="--i:4">Quero participar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="learn" id="conteudo">
+  <div class="wrap">
+    <div class="learn-head">
+      <h2 data-rise>O que você vai aprender</h2>
+      <p data-rise style="--i:1">Duas horas ao vivo, com a Bíblia aberta, para entender o que você faz no altar e por quê.</p>
+    </div>
+    <article class="topic" data-rise>
+      <div><h3>O que é adoração</h3><p class="hook">Adoração é um estilo de música? É música lenta?</p></div>
+      <p>Entenda o que a Bíblia diz sobre o que ela é, e por que esse entendimento muda a forma como você vive, serve e ministra no louvor.</p>
+    </article>
+    <article class="topic" data-rise>
+      <div><h3>O que é louvor</h3><p class="hook">Louvor é música rápida, pra agitar a igreja?</p></div>
+      <p>Descubra o que é louvor de verdade, qual é a diferença entre louvor e adoração e por que confundir os dois enfraquece a sua entrega e ministração.</p>
+    </article>
+    <article class="topic" data-rise>
+      <div><h3>As 7 expressões de louvor</h3><p class="hook">Como o povo de Deus se expressa diante dele</p></div>
+      <p>O que a Palavra mostra sobre cada expressão, e como colocar e ensinar cada uma em prática no seu ministério, na sua equipe e na sua igreja.</p>
+    </article>
+    <article class="topic" data-rise>
+      <div><h3>A arte é um meio, não o fim</h3><p class="hook">Sua voz, seu instrumento, seu talento</p></div>
+      <p>Eles são um meio para revelar a beleza de Cristo. Aprenda a usar as ferramentas sem deixar que a arte ocupe o lugar de quem ela deveria apontar.</p>
+    </article>
+  </div>
+</section>
+
+<section class="who" id="para-quem">
+  <div class="wrap who-grid">
+    <div>
+      <h2 data-rise>Esta aula é para você se…</h2>
+      <ul>
+        <li data-rise style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Lidera ou ministra o louvor na sua igreja</li>
+        <li data-rise style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>É vocalista, backing vocal ou músico numa equipe de adoração</li>
+        <li data-rise style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Forma e acompanha novas gerações no ministério</li>
+        <li data-rise style="--i:4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Quer servir com excelência e entendimento, sem separar técnica de unção</li>
+      </ul>
+      <a class="btn buy" href="#" data-checkout data-rise style="--i:5">Essa aula é pra mim <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <figure data-rise><img src="img/babi-canuto.jpg" alt="Babi Canuto sorrindo, sentada numa poltrona" width="750" height="1125" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="when" id="quando">
+  <div class="wrap when-grid">
+    <div>
+      <h2 data-rise>Terça, 24 de novembro</h2>
+      <div class="count" id="count" data-rise style="--i:1" aria-live="polite">
+        <div><b id="cd-d">–</b><span>dias</span></div>
+        <div><b id="cd-h">–</b><span>horas</span></div>
+        <div><b id="cd-m">–</b><span>minutos</span></div>
+        <div><b id="cd-s">–</b><span>segundos</span></div>
+      </div>
+      <p class="count-note" id="count-note">para começarmos, ao vivo.</p>
+    </div>
+    <dl class="when-rows" data-rise style="--i:2">
+      <div><dt>Início</dt><dd>20h (Brasília)</dd></div>
+      <div><dt>Encerramento</dt><dd>22h</dd></div>
+      <div><dt>Onde</dt><dd>Google Meet, ao vivo</dd></div>
+      <div><dt>Link de acesso</dt><dd>Enviado após a compra</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="price" id="preco">
+  <div class="wrap price-grid">
+    <div>
+      <h2 data-rise>Garanta sua vaga na noite de 24/11</h2>
+      <p class="price-sub" data-rise style="--i:1">Duas horas ao vivo com a Babi, sobre o que a Palavra ensina a respeito de louvor e adoração.</p>
+    </div>
+    <div class="includes" data-rise style="--i:2">
+      <h3>O que está incluso</h3>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Workshop ao vivo, 24/11, das 20h às 22h, pelo Google Meet</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Certificado de participação</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Conteúdo do treinamento Essência e Devoção</li>
+      </ul>
+      <a class="btn checkout" href="#" data-checkout>Comprar minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="pay">Valores e parcelamento no checkout seguro da Hotmart</p>
+    </div>
+  </div>
+</section>
+
+<section class="voices" id="depoimentos">
+  <div class="wrap">
+    <h2 data-rise>O que dizem das aulas da Babi</h2>
+    <figure class="quote" data-rise style="--i:1">
+      <blockquote>“Excelência em cada palavra e em cada ensinamento.”</blockquote>
+      <figcaption>Kelly Keidann, Pará</figcaption>
+    </figure>
+    <div class="prints">
+      <figure data-rise style="--i:0"><img src="img/depoimento-1.jpg" width="900" height="502" loading="lazy" alt="Mensagem de Regiane, do Pará: Que o Senhor continue abençoando poderosamente sua vida, você é uma mulher extraordinária e reflete a graça e amor de Cristo. Obrigada por nos permitir te conhecer e desfrutar de tanto conhecimento."><figcaption>Regiane, Pará</figcaption></figure>
+      <figure data-rise style="--i:1"><img src="img/depoimento-2.jpg" width="900" height="1102" loading="lazy" alt="Mensagem de Gustavo, do Pará: Que aula maravilhosa, conteúdo realmente denso e nos deixou pensando e refletindo."><figcaption>Gustavo, Pará</figcaption></figure>
+      <figure data-rise style="--i:2"><img src="img/depoimento-3.jpg" width="900" height="524" loading="lazy" alt="Mensagem de Kelly Keidann, do Pará: Excelência em cada palavra e em cada ensinamento depositado sobre as nossas vidas. Bárbara, você reflete Jesus naturalmente."><figcaption>Kelly Keidann, Pará</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="babi">
+  <div class="wrap about-grid">
+    <div>
+      <h2 data-rise>Quem conduz a noite</h2>
+      <p data-rise style="--i:1"><strong>Bárbara Canuto</strong> é cantora, líder de adoração há 21 anos e Vocal Coach há 9. Ativa vozes no Brasil e no mundo, com formação em Anatomofisiologia Vocal pelo CEV (SP) e em Ciência e Pedagogia Vocal.</p>
+      <p data-rise style="--i:2">Já atendeu pessoas no Brasil, na Bolívia, em Portugal, na França e nos EUA, formando cantores e equipes que escutam a própria voz e sabem decidir o que fazer com ela, sem separar a técnica da unção.</p>
+      <div class="facts" data-rise style="--i:3">
+        <div><b>21 anos</b><span>liderando a adoração</span></div>
+        <div><b>9 anos</b><span>como Vocal Coach</span></div>
+        <div><b>CEV</b><span>Anatomofisiologia Vocal, São Paulo</span></div>
+        <div><b>5 países</b><span>Brasil, Bolívia, Portugal, França e EUA</span></div>
+      </div>
+    </div>
+    <figure data-rise><img src="img/babi-palco.jpg" alt="Babi Canuto em pé diante de uma cortina roxa" width="660" height="838" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="guarantee" id="garantia">
+  <div class="wrap guarantee-grid">
+    <div class="seal" data-rise><div><b>7</b><span>dias de<br>garantia</span></div></div>
+    <div data-rise style="--i:1">
+      <h2>Garantia incondicional</h2>
+      <p>Se participar e sentir que não era para você, peça o reembolso pela própria Hotmart em até 7 dias após a compra. Sem perguntas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="duvidas">
+  <div class="wrap">
+    <h2 data-rise>Perguntas frequentes</h2>
+    <div class="qa" data-rise><h3>Onde vai ser o workshop?</h3><p>Online e ao vivo, pelo Google Meet, na terça-feira, 24/11, das 20h às 22h (horário de Brasília).</p></div>
+    <div class="qa" data-rise><h3>Como recebo o acesso?</h3><p>Logo após a compra a Hotmart envia a confirmação para o seu e-mail, com as orientações para participar da aula ao vivo.</p></div>
+    <div class="qa" data-rise><h3>Vai ter gravação?</h3><p>Não. A aula acontece só ao vivo e não terá replay. Reserve a sua terça, 24/11, das 20h às 22h.</p></div>
+    <div class="qa" data-rise><h3>Vou receber certificado?</h3><p>Sim. Quem participar recebe certificado de participação.</p></div>
+    <div class="qa" data-rise><h3>Preciso ser músico profissional?</h3><p>Não. A aula é para quem lidera, ministra, canta ou toca numa equipe de louvor, e para quem forma novas gerações no ministério, em qualquer nível.</p></div>
+    <div class="qa" data-rise><h3>Posso pagar no Pix ou no cartão?</h3><p>Sim. O pagamento é feito na Hotmart, que aceita Pix e cartão de crédito.</p></div>
+    <div class="qa" data-rise><h3>E se eu não gostar?</h3><p>Você tem 7 dias de garantia. É só pedir o reembolso pela Hotmart.</p></div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <h2 data-rise>Ele é digno de tudo, por inteiro.</h2>
+    <div class="close-foot" data-rise style="--i:1">
+      <p>Terça, 24/11, às 20h. Uma noite para alinhar o seu louvor com o que a Palavra ensina.</p>
+      <a class="btn light buy" href="#" data-checkout>Quero garantir minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="img/lettering.png" alt="Teologia da Adoração, workshop" width="780" height="380" loading="lazy">
+    <div class="legal"><span>© 2026 Babi Canuto · Workshop Teologia da Adoração</span><span>Pagamento processado pela Hotmart</span></div>
+  </div>
+</footer>
+
+
+<script>
+/* ===== CONFIGURAÇÃO ===== */
+const CONFIG = {
+  checkout: "https://pay.hotmart.com/A108455499P",
+  evento: "2026-11-24T20:00:00-03:00",
+  pixel: ""           // ID do Meta Pixel, ex.: "591645249233364"
+};
+/* ======================== */
+
+document.documentElement.classList.add("js");
+
+// link do checkout, levando as UTMs da página
+const params = new URLSearchParams(location.search);
+const checkoutUrl = new URL(CONFIG.checkout);
+params.forEach((v, k) => checkoutUrl.searchParams.set(k, v));
+document.querySelectorAll("[data-checkout]").forEach(a => {
+  a.href = checkoutUrl.toString();
+  a.addEventListener("click", () => { if (window.fbq) fbq("track", "InitiateCheckout"); });
+});
+
+// contagem regressiva
+const alvo = new Date(CONFIG.evento).getTime();
+function tick() {
+  let s = Math.max(0, Math.floor((alvo - Date.now()) / 1000));
+  if (s === 0) {
+    document.getElementById("count").hidden = true;
+    document.getElementById("count-note").textContent = "O workshop já começou ou aconteceu.";
+    return;
+  }
+  document.getElementById("cd-d").textContent = Math.floor(s / 86400);
+  document.getElementById("cd-h").textContent = Math.floor(s % 86400 / 3600);
+  document.getElementById("cd-m").textContent = Math.floor(s % 3600 / 60);
+  document.getElementById("cd-s").textContent = s % 60;
+  setTimeout(tick, 1000);
+}
+tick();
+
+// entradas ao rolar
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+}), { rootMargin: "0px 0px -8% 0px" });
+document.querySelectorAll("[data-rise]").forEach(el => io.observe(el));
+
+// Meta Pixel
+if (CONFIG.pixel) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq("init", CONFIG.pixel);
+  fbq("track", "PageView");
+}
+</script>
+</body>
+</html>
